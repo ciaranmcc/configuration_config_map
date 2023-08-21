@@ -4,4 +4,4 @@ metadata:
   name: json-configmap
 data:
   application.json: |-
-    {{ .Files.Get "path/to/application.json" | nindent 4 }}
+    {{ .Files.Get "./application.json" | nindent 4 }}
