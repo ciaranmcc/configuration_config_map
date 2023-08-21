@@ -1,0 +1,18 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+# The trigger section defines when this pipeline should be executed.
+trigger:
+  event:
+    - push
+    - tag
+  branch:
+    - main
+
+# The steps that will be executed in this pipeline.
+steps:
+  - name: print_message
+    image: lachlanevenson/k8s-kubectl
+    commands:
+      - kubectl apply -f config_map_creation.yml -n test
