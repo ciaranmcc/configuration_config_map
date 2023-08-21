@@ -15,4 +15,4 @@ steps:
   - name: create_config_map
     image: lachlanevenson/k8s-kubectl
     commands:
-      - kubectl apply -f config1_map_creation.yml -n test
+      - kubectl apply -f config_map_creation.yml -n test
