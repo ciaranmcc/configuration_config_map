@@ -4,4 +4,4 @@ metadata:
   name: json-configmap
 data:
   application.json: |-
-    This is a test 
+    This is a test 1
